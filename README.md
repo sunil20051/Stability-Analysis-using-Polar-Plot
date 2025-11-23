@@ -19,22 +19,22 @@ Computer with MATLAB software
 	Also determine the stability.
 
 ## Program: 
-num=[1]
-den=[conv(1,0),conv(1,0.5),conv(1,0.2)]
-sys=tf(num,den)
-w=logspace(-1,2,1000)
-[mag phase]=bode(sys,w)
-mag=squeeze(mag)
-phase=squeeze(phase)
-theta=deg2rad(phase)
-polarplot(theta,mag,'LineWidth',1.5)
-[gm pm wpc wgc]=margin(sys)
-if (wpc>wgc)
-    disp('stable')
-elseif (wpc==wgc)
-    disp('marginally stable')
-else
-    disp('unstable')
+num=[1] <br>
+den=[conv(1,0),conv(1,0.5),conv(1,0.2)] <br>
+sys=tf(num,den) <br>
+w=logspace(-1,2,1000)<br>
+[mag phase]=bode(sys,w) <br>
+mag=squeeze(mag) <br>
+phase=squeeze(phase) <br>
+theta=deg2rad(phase) <br>
+polarplot(theta,mag,'LineWidth',1.5) <br>
+[gm pm wpc wgc]=margin(sys) <br>
+if (wpc>wgc) <br>
+    disp('stable') <br>
+elseif (wpc==wgc) <br>
+    disp('marginally stable') <br>
+else <br>
+    disp('unstable') <br>
 end
 
 ## Output:
